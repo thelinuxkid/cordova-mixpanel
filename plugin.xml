@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.thelinuxkid.cordova.mixpanel" version="0.0.1">
+
+  <name>Mixpanel</name>
+  <description>Cordova Mixpanel Plugin</description>
+  <repo>https://github.com/thelinuxkid/cordova-mixpanel.git</repo>
+  <license>MIT</license>
+  <author>Andres Buritica</author>
+  <keywords>cordova, mixpanel, ios, android</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=3.5.0" />
+  </engines>
+
+  <js-module src="www/mixpanel.js" name="Mixpanel">
+    <clobbers target="plugin.mixpanel" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Mixpanel">
+        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-sdk android:minSdkVersion="8" />
+
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.BLUETOOTH" />
+      <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+      <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+      <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+      <uses-permission android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE" />
+      <permission android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE"
+                  android:protectionLevel="signature" />
+      <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+                android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter>
+          <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+          <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+          <category android:name="com.thelinuxkid.cordova.mixpanel" />
+        </intent-filter>
+      </receiver>
+    </config-file>
+  </platform>
+
+</plugin>
