@@ -91,10 +91,8 @@ public class Mixpanel extends CordovaPlugin {
                 }
                 JSONObject props = args.optJSONObject(1) ;
                 if (props == null) {
-                    this.error(
-                        cbCtx,
-                        "track properties not provided");
-                    return false;
+                    // It's OK for an event not to have properties.
+                    props = new JSONObject();
                 }
                 mixpanel.track(event, props);
                 cbCtx.success();
