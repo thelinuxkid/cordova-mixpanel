@@ -24,11 +24,12 @@
         <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel"/>
       </feature>
       <feature name="People">
-        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel.People"/>
+        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.People"/>
       </feature>
     </config-file>
 
     <source-file src="src/com/thelinuxkid/cordova/mixpanel/Mixpanel.java" target-dir="src/com/thelinuxkid/cordova/mixpanel" />
+    <source-file src="src/com/thelinuxkid/cordova/mixpanel/People.java" target-dir="src/com/thelinuxkid/cordova/mixpanel" />
     <source-file src="src/android/libs/mixpanel-android-4.5.3.jar" target-dir="libs/" />
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
