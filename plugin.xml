@@ -23,6 +23,9 @@
       <feature name="Mixpanel">
         <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel"/>
       </feature>
+      <feature name="People">
+        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel.People"/>
+      </feature>
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
