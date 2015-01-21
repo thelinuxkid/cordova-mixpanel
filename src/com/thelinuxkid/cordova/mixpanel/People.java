@@ -204,16 +204,19 @@ public class People extends CordovaPlugin {
     @Override
     public void onPause(boolean multitasking) {
         // TODO
+        super.onPause(multitasking);
     }
 
     @Override
     public void onResume(boolean multitasking) {
         // TODO
+        super.onResume(multitasking);
     }
 
     @Override
     public void onReset() {
         // TODO
+        super.onReset();
     }
 
     private void error(CallbackContext cbCtx, String message) {
