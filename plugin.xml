@@ -28,6 +28,8 @@
       </feature>
     </config-file>
 
+    <source-file src="src/com/thelinuxkid/cordova/mixpanel/Mixpanel.java" target-dir="src/com/thelinuxkid/cordova/mixpanel" />
+
     <config-file target="AndroidManifest.xml" parent="/manifest">
       <uses-sdk android:minSdkVersion="8" />
 
