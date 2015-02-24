@@ -69,4 +69,34 @@
     </config-file>
   </platform>
 
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Mixpanel">
+        <param name="ios-package" value="CDVMixpanel"/>
+      </feature>
+      <feature name="People">
+        <param name="ios-package" value="CDVPeople"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVMixpanel.h" />
+    <source-file src="src/ios/CDVMixpanel.m" />
+    <header-file src="src/ios/CDVPeople.h" />
+    <source-file src="src/ios/CDVPeople.m" />
+    <header-file src="src/ios/Mixpanel/Mixpanel.h" />
+    <source-file src="src/ios/Mixpanel/Mixpanel.m" />
+    <source-file
+        src="src/ios/Mixpanel/libMPCategoryHelpers.a"
+        framework="true" />
+
+    <framework src="UIKit.framework" />
+    <framework src="Foundation.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreTelephony.framework" />
+    <framework src="Accelerate.framework" />
+    <framework src="CoreGraphics.framework" />
+    <framework src="QuartzCore.framework" />
+
+  </platform>
+
 </plugin>
