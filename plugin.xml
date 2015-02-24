@@ -21,16 +21,26 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Mixpanel">
-        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.Mixpanel"/>
+        <param
+            name="android-package"
+            value="com.thelinuxkid.cordova.mixpanel.Mixpanel"/>
       </feature>
       <feature name="People">
-        <param name="android-package" value="com.thelinuxkid.cordova.mixpanel.People"/>
+        <param
+            name="android-package"
+            value="com.thelinuxkid.cordova.mixpanel.People"/>
       </feature>
     </config-file>
 
-    <source-file src="src/com/thelinuxkid/cordova/mixpanel/Mixpanel.java" target-dir="src/com/thelinuxkid/cordova/mixpanel" />
-    <source-file src="src/com/thelinuxkid/cordova/mixpanel/People.java" target-dir="src/com/thelinuxkid/cordova/mixpanel" />
-    <source-file src="src/android/libs/mixpanel-android-4.5.3.jar" target-dir="libs/" />
+    <source-file
+        src="src/android/com/thelinuxkid/cordova/mixpanel/Mixpanel.java"
+        target-dir="src/com/thelinuxkid/cordova/mixpanel" />
+    <source-file
+        src="src/android/com/thelinuxkid/cordova/mixpanel/People.java"
+        target-dir="src/com/thelinuxkid/cordova/mixpanel" />
+    <source-file
+        src="src/android/libs/mixpanel-android-4.5.3.jar"
+        target-dir="libs/" />
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
       <uses-sdk android:minSdkVersion="8" />
@@ -41,10 +51,13 @@
       <uses-permission android:name="android.permission.GET_ACCOUNTS" />
       <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-      <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-      <uses-permission android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE" />
-      <permission android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE"
-                  android:protectionLevel="signature" />
+      <uses-permission
+          android:name="com.google.android.c2dm.permission.RECEIVE" />
+      <uses-permission
+          android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE" />
+      <permission
+          android:name="com.thelinuxkid.cordova.mixpanel.permission.C2D_MESSAGE"
+          android:protectionLevel="signature" />
       <receiver android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
                 android:permission="com.google.android.c2dm.permission.SEND" >
         <intent-filter>
