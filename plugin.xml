@@ -80,15 +80,170 @@
     </config-file>
 
     <header-file src="src/ios/CDVMixpanel.h" />
-    <source-file src="src/ios/CDVMixpanel.m" />
     <header-file src="src/ios/CDVPeople.h" />
+    <source-file src="src/ios/CDVMixpanel.m" />
     <source-file src="src/ios/CDVPeople.m" />
-    <header-file src="src/ios/Mixpanel/Mixpanel.h" />
-    <source-file src="src/ios/Mixpanel/Mixpanel.m" />
-    <source-file
-        src="src/ios/Mixpanel/libMPCategoryHelpers.a"
-        framework="true" />
 
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerChangeRequestMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerChangeResponseMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerClearRequestMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerClearResponseMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerConnection.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerDeviceInfoRequestMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerDeviceInfoResponseMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerDisconnectMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerSnapshotRequestMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerSnapshotResponseMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerTweakRequestMessage.h" />
+    <header-file
+        src="src/ios/Mixpanel/MPABTestDesignerTweakResponseMessage.h" />
+    <header-file src="src/ios/Mixpanel/MPAbstractABTestDesignerMessage.h" />
+    <header-file src="src/ios/Mixpanel/MPApplicationStateSerializer.h" />
+    <header-file src="src/ios/Mixpanel/MPCategoryHelpers.h" />
+    <header-file src="src/ios/Mixpanel/MPClassDescription.h" />
+    <header-file src="src/ios/Mixpanel/MPDesignerEventBindingMessage.h" />
+    <header-file src="src/ios/Mixpanel/MPDesignerSessionCollection.h" />
+    <header-file src="src/ios/Mixpanel/MPEnumDescription.h" />
+    <header-file src="src/ios/Mixpanel/MPEventBinding.h" />
+    <header-file src="src/ios/Mixpanel/MPLogger.h" />
+    <header-file src="src/ios/Mixpanel/MPNotification.h" />
+    <header-file src="src/ios/Mixpanel/MPNotificationViewController.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectIdentifierProvider.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectIdentityProvider.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectSelector.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectSerializer.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectSerializerConfig.h" />
+    <header-file src="src/ios/Mixpanel/MPObjectSerializerContext.h" />
+    <header-file src="src/ios/Mixpanel/MPPropertyDescription.h" />
+    <header-file src="src/ios/Mixpanel/MPSequenceGenerator.h" />
+    <header-file src="src/ios/Mixpanel/MPSurvey.h" />
+    <header-file src="src/ios/Mixpanel/MPSurveyNavigationController.h" />
+    <header-file src="src/ios/Mixpanel/MPSurveyQuestion.h" />
+    <header-file src="src/ios/Mixpanel/MPSurveyQuestionViewController.h" />
+    <header-file src="src/ios/Mixpanel/MPSwizzler.h" />
+    <header-file src="src/ios/Mixpanel/MPTweak.h" />
+    <header-file src="src/ios/Mixpanel/MPTweakInline.h" />
+    <header-file src="src/ios/Mixpanel/MPTweakInlineInternal.h" />
+    <header-file src="src/ios/Mixpanel/MPTweakStore.h" />
+    <header-file src="src/ios/Mixpanel/MPTypeDescription.h" />
+    <header-file src="src/ios/Mixpanel/MPUIControlBinding.h" />
+    <header-file src="src/ios/Mixpanel/MPUITableViewBinding.h" />
+    <header-file src="src/ios/Mixpanel/MPValueTransformers.h" />
+    <header-file src="src/ios/Mixpanel/MPVariant.h" />
+    <header-file src="src/ios/Mixpanel/MPWebSocket.h" />
+    <header-file src="src/ios/Mixpanel/Mixpanel.h" />
+    <header-file src="src/ios/Mixpanel/NSData+MPBase64.h" />
+    <header-file src="src/ios/Mixpanel/NSInvocation+MPHelpers.h" />
+    <header-file src="src/ios/Mixpanel/UIColor+MPColor.h" />
+    <header-file src="src/ios/Mixpanel/UIImage+MPAverageColor.h" />
+    <header-file src="src/ios/Mixpanel/UIImage+MPImageEffects.h" />
+    <header-file src="src/ios/Mixpanel/_MPTweakBindObserver.h" />
+
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerChangeRequestMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerChangeResponseMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerClearRequestMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerClearResponseMessage.m" />
+    <source-file src="src/ios/Mixpanel/MPABTestDesignerConnection.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerDeviceInfoRequestMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerDeviceInfoResponseMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerDisconnectMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerSnapshotRequestMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerSnapshotResponseMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerTweakRequestMessage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPABTestDesignerTweakResponseMessage.m" />
+    <source-file src="src/ios/Mixpanel/MPAbstractABTestDesignerMessage.m" />
+    <source-file src="src/ios/Mixpanel/MPApplicationStateSerializer.m" />
+    <source-file src="src/ios/Mixpanel/MPBOOLToNSNumberValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCATransform3DToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCGAffineTransformToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCGColorRefToNSStringValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCGPointToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCGRectToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPCGSizeToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPClassDescription.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPDesignerEventBindingRequestMesssage.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPDesignerEventBindingResponseMesssage.m" />
+    <source-file src="src/ios/Mixpanel/MPDesignerTrackMessage.m" />
+    <source-file src="src/ios/Mixpanel/MPEnumDescription.m" />
+    <source-file src="src/ios/Mixpanel/MPEventBinding.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPNSAttributedStringToNSDictionaryValueTransformer.m" />
+    <source-file src="src/ios/Mixpanel/MPNSNumberToCGFloatValueTransformer.m" />
+    <source-file src="src/ios/Mixpanel/MPNotification.m" />
+    <source-file src="src/ios/Mixpanel/MPNotificationViewController.m" />
+    <source-file src="src/ios/Mixpanel/MPObjectIdentityProvider.m" />
+    <source-file src="src/ios/Mixpanel/MPObjectSelector.m" />
+    <source-file src="src/ios/Mixpanel/MPObjectSerializer.m" />
+    <source-file src="src/ios/Mixpanel/MPObjectSerializerConfig.m" />
+    <source-file src="src/ios/Mixpanel/MPObjectSerializerContext.m" />
+    <source-file src="src/ios/Mixpanel/MPPassThroughValueTransformer.m" />
+    <source-file src="src/ios/Mixpanel/MPPropertyDescription.m" />
+    <source-file src="src/ios/Mixpanel/MPSequenceGenerator.m" />
+    <source-file src="src/ios/Mixpanel/MPSurvey.m" />
+    <source-file src="src/ios/Mixpanel/MPSurveyNavigationController.m" />
+    <source-file src="src/ios/Mixpanel/MPSurveyQuestion.m" />
+    <source-file src="src/ios/Mixpanel/MPSurveyQuestionViewController.m" />
+    <source-file src="src/ios/Mixpanel/MPSwizzler.m" />
+    <source-file src="src/ios/Mixpanel/MPTweak.m" />
+    <source-file src="src/ios/Mixpanel/MPTweakInline.m" />
+    <source-file src="src/ios/Mixpanel/MPTweakStore.m" />
+    <source-file src="src/ios/Mixpanel/MPTypeDescription.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPUIColorToNSStringValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPUIControlBinding.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPUIEdgeInsetsToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPUIFontToNSDictionaryValueTransformer.m" />
+    <source-file
+        src="src/ios/Mixpanel/MPUIImageToNSDictionaryValueTransformer.m" />
+    <source-file src="src/ios/Mixpanel/MPUITableViewBinding.m" />
+    <source-file src="src/ios/Mixpanel/MPVariant.m" />
+    <source-file src="src/ios/Mixpanel/MPWebSocket.m" />
+    <source-file src="src/ios/Mixpanel/Mixpanel.m" />
+    <source-file src="src/ios/Mixpanel/NSData+MPBase64.m" />
+    <source-file src="src/ios/Mixpanel/NSInvocation+MPHelpers.m" />
+    <source-file src="src/ios/Mixpanel/UIColor+MPColor.m" />
+    <source-file src="src/ios/Mixpanel/UIImage+MPAverageColor.m" />
+    <source-file src="src/ios/Mixpanel/UIImage+MPImageEffects.m" />
+    <source-file src="src/ios/Mixpanel/_MPTweakBindObserver.m" />
+
+    <source-file
+        src="src/ios/Mixpanel/libMPCategoryHelpers.a" framework="true" />
     <framework src="UIKit.framework" />
     <framework src="Foundation.framework" />
     <framework src="SystemConfiguration.framework" />
@@ -96,6 +251,8 @@
     <framework src="Accelerate.framework" />
     <framework src="CoreGraphics.framework" />
     <framework src="QuartzCore.framework" />
+
+    <resource-file src="src/ios/Mixpanel/Media.xcassets" />
 
   </platform>
 
