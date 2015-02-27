@@ -3,19 +3,16 @@
 
 @interface CDVPeople: CDVPlugin
 
-- (void) identify:(CDVInvokedUrlCommand*)command;
+- (void) distinct_id:(CDVInvokedUrlCommand*)command;
 - (void) set:(CDVInvokedUrlCommand*)command;
-- (void) setOnce:(CDVInvokedUrlCommand*)command;
+- (void) set_once:(CDVInvokedUrlCommand*)command;
 - (void) increment:(CDVInvokedUrlCommand*)command;
 - (void) append:(CDVInvokedUrlCommand*)command;
 - (void) union:(CDVInvokedUrlCommand*)command;
 - (void) unset:(CDVInvokedUrlCommand*)command;
-- (void) trackCharge:(CDVInvokedUrlCommand*)command;
-- (void) clearCharges:(CDVInvokedUrlCommand*)command;
-- (void) deleteUser:(CDVInvokedUrlCommand*)command;
-- (void) initPushHandling:(CDVInvokedUrlCommand*)command;
-- (void) setPushRegID:(CDVInvokedUrlCommand*)command;
-- (void) clearPushRegID:(CDVInvokedUrlCommand*)command;
-- (void) distinctID:(CDVInvokedUrlCommand*)command;
+- (void) track_charge:(CDVInvokedUrlCommand*)command;
+- (void) clear_charges:(CDVInvokedUrlCommand*)command;
+- (void) delete_user:(CDVInvokedUrlCommand*)command;
+- (void) add_push_device_token:(CDVInvokedUrlCommand*)command;
 
 @end

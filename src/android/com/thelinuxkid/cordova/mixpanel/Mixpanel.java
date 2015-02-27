@@ -50,7 +50,7 @@ public class Mixpanel extends CordovaPlugin {
                 }
                 String original = args.optString(1, NO);
                 if (TextUtils.isEmpty(original))  {
-                    this.error(cbCtx, "alias original id provided");
+                    this.error(cbCtx, "alias original id not provided");
                     return false;
                 }
                 mixpanel.alias(alias, original);
@@ -66,6 +66,7 @@ public class Mixpanel extends CordovaPlugin {
                     return false;
                 }
                 mixpanel.identify(id);
+                people.identify(id);
                 cbCtx.success();
                 return true;
             }

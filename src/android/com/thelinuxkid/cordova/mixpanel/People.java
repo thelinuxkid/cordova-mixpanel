@@ -26,18 +26,7 @@ public class People extends CordovaPlugin {
             people = Mixpanel.people;
             if (people == null) {
                 this.error(cbCtx, "mixpanel is not initialized");
-            }
-            if (action.equals("identify")) {
-                String id = args.optString(0, NO);
-                if (TextUtils.isEmpty(id))  {
-                    this.error(
-                        cbCtx,
-                        "identify distinct id not provided");
-                    return false;
-                }
-                people.identify(id);
-                cbCtx.success();
-                return true;
+                return false;
             }
             if (action.equals("set")) {
                 JSONObject props = args.optJSONObject(0);

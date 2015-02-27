@@ -55,14 +55,10 @@ Mixpanel.prototype.reset = function(success, error) {
     cordova.exec(success, error, 'Mixpanel', 'reset', []);
 }
 
-Mixpanel.prototype.device_info = function(success, error) {
-    cordova.exec(success, error, 'Mixpanel', 'device_info', []);
-}
-
 function People() {}
 
-People.prototype.identify = function(id, success, error) {
-    cordova.exec(success, error, 'People', 'identify', [id]);
+People.prototype.distinct_id = function(success, error) {
+    cordova.exec(success, error, 'People', 'distinct_id', []);
 }
 
 People.prototype.set = function(props, success, error) {
@@ -88,9 +84,11 @@ People.prototype.union = function(prop, value, success, error) {
     cordova.exec(success, error, 'People', 'union', args);
 }
 
+// Android only (method is missing in iOS)
 People.prototype.unset = function(prop, success, error) {
     cordova.exec(success, error, 'People', 'unset', prop);
 }
+//
 
 People.prototype.track_charge = function(amount, props, success, error) {
     var args = [amount, props];
@@ -105,6 +103,7 @@ People.prototype.delete_user = function(success, error) {
     cordova.exec(success, error, 'People', 'delete_user', []);
 }
 
+// Android only
 People.prototype.init_push_handling = function(id, success, error) {
     cordova.exec(success, error, 'People', 'init_push_handling', [id]);
 }
@@ -116,10 +115,13 @@ People.prototype.set_push_reg_id = function(id, success, error) {
 People.prototype.clear_push_reg_id = function(success, error) {
     cordova.exec(success, error, 'People', 'clear_push_reg_id', []);
 }
+//
 
-People.prototype.distinct_id = function(success, error) {
-    cordova.exec(success, error, 'People', 'distinct_id', []);
+// iOS only
+People.prototype.add_push_device_token = function(success, error) {
+    cordova.exec(success, error, 'People', 'add_push_device_token', []);
 }
+//
 
 module.exports = new Mixpanel();
 module.exports.people = new People();
