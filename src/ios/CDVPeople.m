@@ -5,11 +5,23 @@
 @implementation CDVPeople
 
 - (void) pluginInitialize {
-    [[UIApplication sharedApplication]
-        registerForRemoteNotificationTypes:
-        (UIRemoteNotificationTypeBadge |
-         UIRemoteNotificationTypeSound |
-         UIRemoteNotificationTypeAlert)];
+    if ([[UIApplication sharedApplication] respondsToSelector:
+            @selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication]
+            registerUserNotificationSettings:[
+                UIUserNotificationSettings settingsForTypes:(
+                    UIUserNotificationTypeSound |
+                    UIUserNotificationTypeAlert |
+                    UIUserNotificationTypeBadge) categories:nil]
+            ];
+
+    } else {
+        [[UIApplication sharedApplication]
+            registerForRemoteNotificationTypes:
+            (UIUserNotificationTypeBadge |
+             UIUserNotificationTypeSound |
+             UIUserNotificationTypeAlert)];
+    }
 }
 
 - (void) distinct_id:(CDVInvokedUrlCommand*)command {
