@@ -4,26 +4,6 @@
 
 @implementation CDVPeople
 
-- (void) pluginInitialize {
-    if ([[UIApplication sharedApplication] respondsToSelector:
-            @selector(registerUserNotificationSettings:)]) {
-        [[UIApplication sharedApplication]
-            registerUserNotificationSettings:[
-                UIUserNotificationSettings settingsForTypes:(
-                    UIUserNotificationTypeSound |
-                    UIUserNotificationTypeAlert |
-                    UIUserNotificationTypeBadge) categories:nil]
-            ];
-
-    } else {
-        [[UIApplication sharedApplication]
-            registerForRemoteNotificationTypes:
-            (UIUserNotificationTypeBadge |
-             UIUserNotificationTypeSound |
-             UIUserNotificationTypeAlert)];
-    }
-}
-
 - (void) distinct_id:(CDVInvokedUrlCommand*)command {
     if (![CDVMixpanel People]) {
         [CDVMixpanel resultUninitialized:command
