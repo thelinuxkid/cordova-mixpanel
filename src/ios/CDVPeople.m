@@ -172,7 +172,7 @@
     [CDVMixpanel result:command withDelegate:self.commandDelegate];
 }
 
-- (void) add_push_device_token:(CDVInvokedUrlCommand*)command {
+- (void) add_push_token:(CDVInvokedUrlCommand*)command {
     if (![CDVMixpanel People]) {
         [CDVMixpanel resultUninitialized:command
             withDelegate:self.commandDelegate];

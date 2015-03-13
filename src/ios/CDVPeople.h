@@ -13,6 +13,6 @@
 - (void) track_charge:(CDVInvokedUrlCommand*)command;
 - (void) clear_charges:(CDVInvokedUrlCommand*)command;
 - (void) delete_user:(CDVInvokedUrlCommand*)command;
-- (void) add_push_device_token:(CDVInvokedUrlCommand*)command;
+- (void) add_push_token:(CDVInvokedUrlCommand*)command;
 
 @end

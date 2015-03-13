@@ -118,8 +118,8 @@ People.prototype.clear_push_reg_id = function(success, error) {
 //
 
 // iOS only
-People.prototype.add_push_device_token = function(success, error) {
-    cordova.exec(success, error, 'People', 'add_push_device_token', []);
+People.prototype.add_push_token = function(token, success, error) {
+    cordova.exec(success, error, 'People', 'add_push_token', [token]);
 }
 //
 
