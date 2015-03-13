@@ -2,6 +2,12 @@
 #import "CDVMixpanel.h"
 #import "Mixpanel.h"
 
+@interface CDVPeople ()
+
+-(NSData *) dataFromHexString:(NSString *)hexStr;
+
+@end
+
 @implementation CDVPeople
 
 - (void) distinct_id:(CDVInvokedUrlCommand*)command {
@@ -178,15 +184,49 @@
             withDelegate:self.commandDelegate];
         return;
     }
-    NSData * token = [command argumentAtIndex:0];
+    NSString * tokenStr = [command argumentAtIndex:0];
     if (!token) {
         [CDVMixpanel result:command
             withDelegate:self.commandDelegate
             andError:@"push device token not provided"];
         return;
     }
+    NSData *token = [self dataFromHexString:tokenStr];
     [[CDVMixpanel People] addPushDeviceToken:token];
     [CDVMixpanel result:command withDelegate:self.commandDelegate];
+}
+
+-(NSData *) dataFromHexString:(NSString *) hexstr
+{
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSString *inputStr = [hexstr uppercaseString];
+
+    NSString *hexChars = @"0123456789ABCDEF";
+
+    Byte b1,b2;
+    b1 = 255;
+    b2 = 255;
+    for (int i=0; i<hexstr.length; i++) {
+        NSString *subStr = [inputStr substringWithRange:NSMakeRange(i, 1)];
+        NSRange loc = [hexChars rangeOfString:subStr];
+
+        if (loc.location == NSNotFound) continue;
+
+        if (255 == b1) {
+            b1 = (Byte)loc.location;
+        }else {
+            b2 = (Byte)loc.location;
+
+            //Appending the Byte to NSData
+            Byte *bytes = malloc(sizeof(Byte) *1);
+            bytes[0] = ((b1<<4) & 0xf0) | (b2 & 0x0f);
+            [data appendBytes:bytes length:1];
+
+            b1 = b2 = 255;
+        }
+    }
+
+    return data;
 }
 
 @end
