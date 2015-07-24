@@ -185,7 +185,7 @@
         return;
     }
     NSString * tokenStr = [command argumentAtIndex:0];
-    if (!token) {
+    if (!tokenStr) {
         [CDVMixpanel result:command
             withDelegate:self.commandDelegate
             andError:@"push device token not provided"];
