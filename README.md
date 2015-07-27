@@ -377,11 +377,14 @@ Push Notifications
 ==================
 
 This plugin can be used in conjunction with
-https://github.com/thelinuxkid/PushPlugin to receive push
+[PushPlugin](https://github.com/thelinuxkid/PushPlugin) to receive push
 notifications. Follow the PushPlugin
 [README](https://github.com/thelinuxkid/PushPlugin/blob/master/README.md)
 to setup the notifications, then, come back here to finish the setup for
-Mixpanel.
+Mixpanel. Make sure to install
+https://github.com/thelinuxkid/PushPlugin.git and NOT
+https://github.com/phonegap-build/PushPlugin.git, at least until the pull
+request is merged.
 
 Android setup
 -------------
